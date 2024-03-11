@@ -36,7 +36,7 @@ public class ProductMapperTest {
 
         // given
         final ProductEntity productEntity = ProductEntityModelTestUtil.basic();
-        final ProductDto expectdProductDto = ProductDtoModelTestUtil.basic();
+        final ProductDto expectdProductDto = ProductDtoModelTestUtil.basic().withBarcode("test");
 
         // when
         final ProductDto actualProductDto = productMapper.toDto(productEntity);
