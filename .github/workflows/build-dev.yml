@@ -1,0 +1,29 @@
+name: build-dev
+on:
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
+
+  pull_request:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
