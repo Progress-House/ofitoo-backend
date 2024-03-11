@@ -12,8 +12,8 @@ on:
       - '.gitignore'
 
   pull_request:
-    branches:
-      - develop
+#    branches:
+#      - develop
     paths-ignore:
       - 'docs/**'
       - 'docker/**'
