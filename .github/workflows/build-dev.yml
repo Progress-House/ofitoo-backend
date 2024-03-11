@@ -1,17 +1,6 @@
 name: build-dev
 on:
-  push:
-    branches:
-      - develop
-    paths-ignore:
-      - 'docs/**'
-      - 'docker/**'
-      - 'kubernetes/**'
-      - 'scripts/**'
-      - 'README.md'
-      - '.gitignore'
-#
-#  pull_request:
+#  push:
 #    branches:
 #      - develop
 #    paths-ignore:
@@ -21,6 +10,17 @@ on:
 #      - 'scripts/**'
 #      - 'README.md'
 #      - '.gitignore'
+
+  pull_request:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
 
 jobs:
   build:
