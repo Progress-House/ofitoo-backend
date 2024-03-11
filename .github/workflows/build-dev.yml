@@ -1,15 +1,15 @@
 name: build-dev
 on:
-#  push:
-#    branches:
-#      - develop
-#    paths-ignore:
-#      - 'docs/**'
-#      - 'docker/**'
-#      - 'kubernetes/**'
-#      - 'scripts/**'
-#      - 'README.md'
-#      - '.gitignore'
+  push:
+    branches:
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - 'docker/**'
+      - 'kubernetes/**'
+      - 'scripts/**'
+      - 'README.md'
+      - '.gitignore'
 
   pull_request:
     branches:
@@ -26,6 +26,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: ls
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-
+      - name: Set up Java - make ls
+        uses: ls
