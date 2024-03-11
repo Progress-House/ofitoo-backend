@@ -10,17 +10,17 @@ on:
       - 'scripts/**'
       - 'README.md'
       - '.gitignore'
-
-  pull_request:
-    branches:
-      - develop
-    paths-ignore:
-      - 'docs/**'
-      - 'docker/**'
-      - 'kubernetes/**'
-      - 'scripts/**'
-      - 'README.md'
-      - '.gitignore'
+#
+#  pull_request:
+#    branches:
+#      - develop
+#    paths-ignore:
+#      - 'docs/**'
+#      - 'docker/**'
+#      - 'kubernetes/**'
+#      - 'scripts/**'
+#      - 'README.md'
+#      - '.gitignore'
 
 jobs:
   build:
