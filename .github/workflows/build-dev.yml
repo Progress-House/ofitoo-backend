@@ -37,3 +37,10 @@ jobs:
 
       - name: Print java version
         run: java --version
+
+      - name: Build project
+        run: |
+          cd microservices
+          mvn clean install
+          pwd 
+          
