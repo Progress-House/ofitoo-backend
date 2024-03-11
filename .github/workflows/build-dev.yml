@@ -42,11 +42,12 @@ jobs:
         run: java --version
 
       - name: Build project
-        run: |
-          mvn clean install
-          pwd 
+        run: mvn clean install
 
-      - name: PWD
+      - name: Run unit tests
+        run: mvn test
+
+      - name: Check test results
         run: |
-          pwd
-          
+          mvn surefire-report:report-only
+          cat target/site/surefire-report.html
